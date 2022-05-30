@@ -6,12 +6,14 @@ import { TopHeader } from "./TopHeader";
 import { Slide } from "./Slide";
 import { Collection } from "./Collection";
 import { BannerTwinning } from "./BannerTwinning";
+import { GoogleMap } from "./GoogleMap";
 
 // HELPERS
 import { dataTopBanner } from '../../helpers/dataTopBanner'
 import { imagesBanner } from '../../helpers/imagesBanner'
 import { dataCollection } from '../../helpers/dataCollection'
 import { imagesBannerTwinning } from '../../helpers/imagesBannerTwinning'
+import { dataGoogleMap } from '../../helpers/dataGoogleMap'
 
 export const Home = () => {
 
@@ -37,6 +39,8 @@ export const Home = () => {
       <Collection user={user.displayName || user.email} text={dataCollection.text} image={dataCollection.image} />
 
       <BannerTwinning imagesBannerTwinning={imagesBannerTwinning} />
+
+      <GoogleMap text={dataGoogleMap.text} src={dataGoogleMap.src} />
 
     </div>
   );
