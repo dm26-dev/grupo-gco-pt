@@ -2,6 +2,9 @@ import { useAuth } from "../../context/AuthContext";
 import { TopBanner } from "./TopBanner";
 
 import { dataTopBanner } from '../../helpers/dataTopBanner'
+import { Slide } from "./Slide";
+
+import { imagesBanner } from '../../helpers/imagesBanner'
 
 export function Home() {
   const { logout, user } = useAuth();
@@ -26,7 +29,9 @@ export function Home() {
         </button>
       </div> */}
 
-      <TopBanner text={dataTopBanner.text} description={dataTopBanner.description}/>
+      <TopBanner text={dataTopBanner.text} description={dataTopBanner.description} />
+
+      <Slide imagesBanner={imagesBanner} />
 
     </div>
   );
