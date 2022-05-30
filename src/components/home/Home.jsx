@@ -5,6 +5,7 @@ import { dataTopBanner } from '../../helpers/dataTopBanner'
 import { Slide } from "./Slide";
 
 import { imagesBanner } from '../../helpers/imagesBanner'
+import { BannerTwinning } from "./BannerTwinning";
 
 export function Home() {
   const { logout, user } = useAuth();
@@ -32,6 +33,8 @@ export function Home() {
       <TopBanner text={dataTopBanner.text} description={dataTopBanner.description} />
 
       <Slide imagesBanner={imagesBanner} />
+
+      <BannerTwinning />
 
     </div>
   );
