@@ -1,14 +1,21 @@
 import { useAuth } from "../../context/AuthContext";
+
+// COMPONENTS
 import { TopBanner } from "./TopBanner";
-
-import { dataTopBanner } from '../../helpers/dataTopBanner'
+import { TopHeader } from "./TopHeader";
 import { Slide } from "./Slide";
-
-import { imagesBanner } from '../../helpers/imagesBanner'
+import { Collection } from "./Collection";
 import { BannerTwinning } from "./BannerTwinning";
 
-export function Home() {
+// HELPERS
+import { imagesBanner } from '../../helpers/imagesBanner'
+import { dataTopBanner } from '../../helpers/dataTopBanner'
+import { imagesBannerTwinning } from '../../helpers/imagesBannerTwinning'
+
+export const Home = () => {
+
   const { logout, user } = useAuth();
+
   const handleLogout = async () => {
     try {
       await logout();
@@ -20,21 +27,15 @@ export function Home() {
   return (
     <div className="container__home">
 
-      {/* <div className="Header Pendiente">
-        <p >welcome {user.displayName || user.email}</p>
-        <button
-          className="bg-slate-200 hover:bg-slate-300 rounded py-2 px-4 text-black"
-          onClick={handleLogout}
-        >
-          logout
-        </button>
-      </div> */}
-
       <TopBanner text={dataTopBanner.text} description={dataTopBanner.description} />
+
+      <TopHeader handleLogout={handleLogout} logo={imagesBannerTwinning.logoWeb} />
 
       <Slide imagesBanner={imagesBanner} />
 
-      <BannerTwinning />
+      {/* <Collection user={user.displayName || user.email} /> */}
+
+      <BannerTwinning imagesBannerTwinning={imagesBannerTwinning} />
 
     </div>
   );

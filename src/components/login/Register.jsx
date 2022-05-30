@@ -3,13 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { Alert } from "./Alert";
 
-export function Register() {
+export const Register = () => {
+
   const { signup } = useAuth();
 
-  const [user, setUser] = useState({
-    email: "",
-    password: "",
-  });
+  const [user, setUser] = useState({ email: "", password: "" });
 
   const [error, setError] = useState("");
   const navigate = useNavigate();

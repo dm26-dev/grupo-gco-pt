@@ -1,0 +1,46 @@
+.container__top_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+
+    &_logo {
+
+        display: flex;        
+        align-items: center;
+
+        img{
+            width: 100px;
+        }        
+    }
+
+    .container__top_header_btn {
+
+        button {
+            background-color: transparent;
+            width: 80px;
+            padding: 0;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: black;
+            cursor: pointer;
+
+            &:hover {
+                color: gainsboro;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+    .container__top_header {
+        padding: 20px 10px;
+
+        p {
+            font-size: 1.2em;
+        }
+    }
+
+}

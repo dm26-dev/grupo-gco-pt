@@ -1,6 +1,4 @@
-import { imagesBannerTwinning } from '../../helpers/imagesBannerTwinning'
-
-export const BannerTwinning = () => {
+export const BannerTwinning = ({ imagesBannerTwinning }) => {
     return (
         <div className="container__banner_twinning">
             <div className="container__banner_twinning_img">
