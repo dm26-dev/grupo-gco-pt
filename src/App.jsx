@@ -1,14 +1,14 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Login } from "./components/Login";
-import { Register } from "./components/Register";
-import { Home } from "./components/Home";
+import { Login } from "./components/login/Login";
+import { Register } from "./components/login/Register";
+import { Home } from "./components/home/Home";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { AuthProvider } from "./context/AuthContext";
 
 function App() {
   return (
-    <div className="bg-slate-300 text-black h-screen flex text-white">
+    <div>
       <AuthProvider>
         <Routes>
           <Route path="/login" element={<Login />} />

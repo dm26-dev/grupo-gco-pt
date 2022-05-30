@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../../context/AuthContext";
 import { Alert } from "./Alert";
 
-export function Login() {
+export function Register() {
+  const { signup } = useAuth();
+
   const [user, setUser] = useState({
     email: "",
     password: "",
   });
-  const { login, loginWithGoogle } = useAuth();
+
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -16,20 +18,7 @@ export function Login() {
     e.preventDefault();
     setError("");
     try {
-      await login(user.email, user.password);
-      navigate("/");
-    } catch (error) {
-      setError(error.message);
-    }
-  };
-
-  const handleChange = ({ target: { value, name } }) => {
-    setUser({ ...user, [name]: value });
-  }
-
-  const handleGoogleSignin = async () => {
-    try {
-      await loginWithGoogle();
+      await signup(user.email, user.password);
       navigate("/");
     } catch (error) {
       setError(error.message);
@@ -39,14 +28,14 @@ export function Login() {
   return (
     <div className="container__app">
 
+
       <div className="container__app_form">
         {error && <Alert message={error} />}
-
         <form
           onSubmit={handleSubmit}
           className="container__app_form_form"
         >
-          <div className="">
+          <div>
             <label
               htmlFor="email"
             >
@@ -54,55 +43,45 @@ export function Login() {
             </label>
             <input
               type="email"
-              name="email"
-              id="email"
-              onChange={handleChange}
-              autoComplete="off"
+              onChange={(e) => setUser({ ...user, email: e.target.value })}
               placeholder="youremail@company.tld"
             />
           </div>
-          <div className="mb-4">
+
+          <div>
             <label
               htmlFor="password"
-              className=""
             >
               Password
             </label>
             <input
               type="password"
-              name="password"
-              id="password"
-              onChange={handleChange}
-              className=""
+              onChange={(e) => setUser({ ...user, password: e.target.value })}
               placeholder="*************"
             />
           </div>
 
-          <div className="container__app_form_form_btns">
+          <div className="container__app_form_form_btn">
             <button
-              className=""
               type="submit"
+              className="container__app_form_form_btns_reg"
             >
-              Sign In
+              Register
             </button>
-
-            <a
-              onClick={handleGoogleSignin}              
-            >
-              Google +
-            </a>
-
           </div>
 
         </form>
 
         <p className="">
-          Don't have an account?
-          <Link to="/register" className="">
-            Register
+          Already have an Account?
+          <Link to="/login" className="">
+            Login
           </Link>
         </p>
+
       </div>
+
+
 
     </div>
   );

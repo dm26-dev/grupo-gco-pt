@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&display=swap');
+
+.container__top_banner {
+    background-color: black;
+    color: white;
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+    display: flex;
+    justify-content: center;
+    font-size: 1.3em;
+    padding: 20px 10px;
+
+    h3{       
+        margin-right: 20px;
+    }
+  
+}
+
+@media screen and (max-width:500px) {
+    .container__top_banner {
+       flex-direction: column;   
+       padding: 10px;    
+       font-size: 1.2em;
+
+       h3{
+           padding: 10px 0;
+       }
+    }
+  
+}

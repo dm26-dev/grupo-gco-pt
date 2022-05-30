@@ -1,6 +1,8 @@
-@import './base/base';
-@import './base/resets';
-@import './abstract/variables';
-@import './components/register';
-@import './components/login';
-@import './components/alert';
+@import './resets';
+@import './variables';
+
+@import './components/login/register';
+@import './components/login/login';
+@import './components/login/alert';
+
+@import './components/home/top-banner';
