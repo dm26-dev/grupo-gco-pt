@@ -8,8 +8,9 @@ import { Collection } from "./Collection";
 import { BannerTwinning } from "./BannerTwinning";
 
 // HELPERS
-import { imagesBanner } from '../../helpers/imagesBanner'
 import { dataTopBanner } from '../../helpers/dataTopBanner'
+import { imagesBanner } from '../../helpers/imagesBanner'
+import { dataCollection } from '../../helpers/dataCollection'
 import { imagesBannerTwinning } from '../../helpers/imagesBannerTwinning'
 
 export const Home = () => {
@@ -33,7 +34,7 @@ export const Home = () => {
 
       <Slide imagesBanner={imagesBanner} />
 
-      {/* <Collection user={user.displayName || user.email} /> */}
+      <Collection user={user.displayName || user.email} text={dataCollection.text} image={dataCollection.image} />
 
       <BannerTwinning imagesBannerTwinning={imagesBannerTwinning} />
 
