@@ -50,18 +50,24 @@
 }
 
 @media screen and (max-width:768px) {
-    .container__google_map {       
-        padding: 0px 0px;
+    .container__google_map {
+        padding: 20px 0px;
         padding-bottom: 40px;
-   
+
         &_text {
             width: 100%;
+            padding: 10px 40px;
+            padding-bottom: 50px;
+
+            p {
+                font-size: 1.4em;               
+            }
         }
 
-        &_iframe{
+        &_iframe {
             width: 100%;
 
-            iframe{
+            iframe {
                 border-radius: 0;
             }
         }

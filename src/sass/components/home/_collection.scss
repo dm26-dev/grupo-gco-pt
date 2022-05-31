@@ -50,17 +50,23 @@
 }
 
 @media screen and (max-width:768px) {
-    .container__collection {       
+    .container__collection {
         padding: 20px 0px;
-        
+
         &_text {
-            width: 100%;      
+            width: 100%;
+            padding: 10px 40px;
+            padding-bottom: 50px;
+
+            p {
+                font-size: 1.4em;
+            }
         }
 
-        &_img{
-            width: 100%;      
-            
-            img{
+        &_img {
+            width: 100%;
+
+            img {
                 border-radius: 0;
             }
         }
