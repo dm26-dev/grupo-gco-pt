@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+## Grupo GCO APP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Link de acceso a la app [pruebagcoluis](https://pruebagcoluis.herokuapp.com)
 
-## Available Scripts
+## Se utilizaron las siguientes librerías
 
-In the project directory, you can run:
+1. Firebase
+2. React-router-dom
+3. Sass
+4. Swiper
+5. Axios
 
-### `npm start`
+### `Ingreso a la app`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Esta aplicación cuenta con unas credenciales de ingreso para la autenticación alojadas en Firebase, 
+podras registrarte en la aplicación dirigiendote al login en la parte del registro,
+ademas podras ingresar a la aplicación por medio de tu cuenta de Gmail, en caso de no estar autenticado
+la aplicación te sacara de ella, cuenta con un sistema de protección de rutas que solo podras tener acceso 
+si estas autenticado, de lo contrario seras redirigido al login.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `Diseño responsivo`
 
-### `npm test`
+Esta aplicación es totalmente adaptable a dispositivos móviles.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Desarrollo de la app`
 
-### `npm run build`
+Esta aplicación esta desarrollada con Create React App en su version 18 con un sistema de autenticación suministrado
+por Firebase, para el manejo del estado se utiliza el Context de React, se utilizaron los siguientes Hooks en la aplicación:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. UseState
+2. UseEffect
+3. UseContext
+4. Otros hooks internos de cada libreria
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Los estilos de la aplicación son administrados con SASS, las imagenes y los textos son suministradas por la empresa y otras 
+de preferencia propia, existe un archivo llamado helper que administra los datos de la app pasadas por medio de props
+en cada componente.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Se agrega um mapa con la API de Google Maps, disponible en la app para dar a conocer algunas de las tiendas de nuestra ciudad.
 
-### `npm run eject`
+Esta aplicación es desplegada en un servicio de hosting que suministra la pagina de Heroku con certificado SSL gratuito.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Buena suerte :D.
