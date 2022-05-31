@@ -1,7 +1,8 @@
 .container__collection {
     display: flex;
     justify-content: space-between;
-    padding: 20px 30px;
+    padding: 40px 30px;
+    padding-bottom: 20px;
     flex-wrap: wrap;
 
     &_text {
@@ -43,6 +44,7 @@
         img {
             width: 100%;
             object-fit: cover;
+            border-radius: 5px;
         }
     }
 }
@@ -56,7 +58,11 @@
         }
 
         &_img{
-            width: 100%;         
+            width: 100%;      
+            
+            img{
+                border-radius: 0;
+            }
         }
     }
 }

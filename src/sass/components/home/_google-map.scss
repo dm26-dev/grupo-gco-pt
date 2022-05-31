@@ -1,7 +1,8 @@
 .container__google_map {
     display: flex;
     justify-content: space-between;
-    padding: 20px 30px;
+    padding: 30px 30px;
+    padding-bottom: 40px;
     flex-wrap: wrap;
 
     &_text {
@@ -51,6 +52,7 @@
 @media screen and (max-width:768px) {
     .container__google_map {       
         padding: 0px 0px;
+        padding-bottom: 40px;
    
         &_text {
             width: 100%;
@@ -58,6 +60,10 @@
 
         &_iframe{
             width: 100%;
+
+            iframe{
+                border-radius: 0;
+            }
         }
     }
 }

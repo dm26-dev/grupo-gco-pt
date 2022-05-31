@@ -7,6 +7,7 @@ import { Slide } from "./Slide";
 import { Collection } from "./Collection";
 import { BannerTwinning } from "./BannerTwinning";
 import { GoogleMap } from "./GoogleMap";
+import { Footer } from "./Footer";
 
 // HELPERS
 import { dataTopBanner } from '../../helpers/dataTopBanner'
@@ -14,6 +15,7 @@ import { imagesBanner } from '../../helpers/imagesBanner'
 import { dataCollection } from '../../helpers/dataCollection'
 import { imagesBannerTwinning } from '../../helpers/imagesBannerTwinning'
 import { dataGoogleMap } from '../../helpers/dataGoogleMap'
+import { dataFooter } from "../../helpers/dataFooter";
 
 export const Home = () => {
 
@@ -41,6 +43,8 @@ export const Home = () => {
       <BannerTwinning imagesBannerTwinning={imagesBannerTwinning} />
 
       <GoogleMap text={dataGoogleMap.text} src={dataGoogleMap.src} />
+
+      <Footer text={dataFooter.text}/>
 
     </div>
   );
