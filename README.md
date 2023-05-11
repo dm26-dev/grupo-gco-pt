@@ -1,6 +1,6 @@
 ## Grupo GCO APP
 
-Link de acceso a la app [pruebagcoluis](https://pruebagcoluis.herokuapp.com)
+Link de acceso a la app [pruebagcoluis](https://grupo-gco-pt.vercel.app/)
 
 ## Se utilizaron las siguientes librerías
 
@@ -38,6 +38,6 @@ en cada componente.
 
 Se agrega um mapa con la API de Google Maps, disponible en la app para dar a conocer algunas de las tiendas de nuestra ciudad.
 
-Esta aplicación es desplegada en un servicio de hosting que suministra la pagina de Heroku con certificado SSL gratuito.
+Esta aplicación es desplegada en un servicio de hosting con certificado SSL llamado Vercel.
 
 Buena suerte :D.
