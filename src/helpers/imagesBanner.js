@@ -7,7 +7,7 @@ export const imagesBanner = [
     {
         id: crypto.randomUUID(),
         description: '',
-        image: 'https://espritchile.cl/modules/ps_imageslider/images/4188be503a46613fc223c97a2cd0d23b799f09c3_BANNER%20SPORT%20SALIDA%202.jpg'
+        image: 'https://media.allure.com/photos/57d32454e14fd0902750ebf7/16:9/w_1328,h_747,c_limit/opening%20ceremony%20promo.jpg'
     }, {
         id: crypto.randomUUID(),
         description: '',
